@@ -1,0 +1,74 @@
+{
+    "dogs": [
+        {
+            "id": 1,
+            "name": "Buddy",
+            "breed": "Golden Retriever",
+            "age": 3,
+            "description": "Loves fetch and swimming. Very energetic and great with kids."
+        },
+        {
+            "id": 2,
+            "name": "Luna",
+            "breed": "Siberian Husky",
+            "age": 2,
+            "description": "Extremely playful and vocal. Loves cold weather and long runs."
+        },
+        {
+            "id": 3,
+            "name": "Max",
+            "breed": "German Shepherd",
+            "age": 5,
+            "description": "Highly intelligent and loyal. Previously trained as a service dog."
+        },
+        {
+            "id": 4,
+            "name": "Bella",
+            "breed": "French Bulldog",
+            "age": 4,
+            "description": "Calm and affectionate. Loves cuddles and short walks."
+        },
+        {
+            "id": 5,
+            "name": "Charlie",
+            "breed": "Beagle",
+            "age": 1,
+            "description": "Curious and mischievous. Has a nose for everything and loves to explore."
+        },
+        {
+            "id": 6,
+            "name": "Daisy",
+            "breed": "Poodle",
+            "age": 6,
+            "description": "Elegant and smart. Excels at agility training and loves to learn tricks."
+        },
+        {
+            "id": 7,
+            "name": "Rocky",
+            "breed": "Rottweiler",
+            "age": 3,
+            "description": "Gentle giant despite his size. Very protective and loyal to his family."
+        },
+        {
+            "id": 8,
+            "name": "Mia",
+            "breed": "Shih Tzu",
+            "age": 2,
+            "description": "Loves being groomed and pampered. Very sociable with strangers."
+        },
+        {
+            "id": 9,
+            "name": "Thor",
+            "breed": "Doberman",
+            "age": 4,
+            "description": "Alert and fearless. Highly trainable and bonds strongly with one person."
+        },
+        {
+            "id": 10,
+            "name": "Coco",
+            "breed": "Dachshund",
+            "age": 5,
+            "description": "Stubborn but charming. Loves burrowing under blankets and belly rubs."
+        }
+    ]
+}

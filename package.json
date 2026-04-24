@@ -1,0 +1,20 @@
+{
+  "name": "dogs-api-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "json-server --watch db.json --port 3001"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "json-server": "^1.0.0-beta.15"
+  },
+  "dependencies": {
+    "typescript": "^6.0.3"
+  }
+}
