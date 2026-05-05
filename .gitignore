@@ -1,4 +1,6 @@
 db.backup.json
+.env
+.mcp.json
 
 # Playwright
 node_modules/

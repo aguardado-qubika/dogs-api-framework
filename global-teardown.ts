@@ -9,11 +9,9 @@ async function globalTeardown() {
     const state = StateManager.getState();
     console.log('\n[global-teardown] Run complete. Final state:', JSON.stringify(state, null, 2));
 
-    // Restore db.json to the pre-run snapshot so the next run starts clean
     if (fs.existsSync(DB_BACKUP)) {
-        fs.copyFileSync(DB_BACKUP, DB_FILE);
         fs.unlinkSync(DB_BACKUP);
-        console.log('[global-teardown] db.json restored to original state.');
+        console.log('[global-teardown] Backup removed. db.json retains all changes from this run.');
     }
 }
 

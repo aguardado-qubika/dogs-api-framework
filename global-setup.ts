@@ -6,7 +6,12 @@ const DB_FILE = path.resolve(__dirname, 'db.json');
 const DB_BACKUP = path.resolve(__dirname, 'db.backup.json');
 
 async function globalSetup() {
-    // Snapshot db.json before the run so teardown can restore it
+    // If a backup exists from a previously interrupted run, restore it first
+    // so we always start from the pre-run clean state, not a dirty db.json
+    if (fs.existsSync(DB_BACKUP)) {
+        fs.copyFileSync(DB_BACKUP, DB_FILE);
+        fs.unlinkSync(DB_BACKUP);
+    }
     fs.copyFileSync(DB_FILE, DB_BACKUP);
     StateManager.reset();
     console.log('[global-setup] db.json snapshotted. State log cleared. Fresh run starting.');

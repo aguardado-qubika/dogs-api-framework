@@ -2,9 +2,9 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 interface StateLog {
-    created: number[];
-    updated: number[];
-    deleted: number[];
+    created: string[];
+    updated: string[];
+    deleted: string[];
     lastRunAt: string | null;
 }
 
@@ -20,21 +20,21 @@ function writeState(state: StateLog): void {
 }
 
 export const StateManager = {
-    trackCreated(id: number): void {
+    trackCreated(id: string): void {
         const state = readState();
         if (!state.created.includes(id)) state.created.push(id);
         state.lastRunAt = new Date().toISOString();
         writeState(state);
     },
 
-    trackUpdated(id: number): void {
+    trackUpdated(id: string): void {
         const state = readState();
         if (!state.updated.includes(id)) state.updated.push(id);
         state.lastRunAt = new Date().toISOString();
         writeState(state);
     },
 
-    trackDeleted(id: number): void {
+    trackDeleted(id: string): void {
         const state = readState();
         // Remove from created/updated, add to deleted
         state.created = state.created.filter(i => i !== id);

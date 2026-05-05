@@ -2,7 +2,7 @@ import { BaseController } from './base.controller';
 import { APIRequestContext, expect } from '@playwright/test';
 
 export interface Dog {
-    id?: number;
+    id?: string;
     name: string;
     breed: string;
     age: number;
@@ -21,7 +21,7 @@ export class DogsController extends BaseController {
         return this.assertAndParse<Dog>(response, 201);
     }
 
-    async getDog(id: number): Promise<Dog> {
+    async getDog(id: string): Promise<Dog> {
         const response = await this.get(`${this.basePath}/${id}`);
         return this.assertAndParse<Dog>(response, 200);
     }
@@ -31,12 +31,12 @@ export class DogsController extends BaseController {
         return this.assertAndParse<Dog[]>(response, 200);
     }
 
-    async updateDog(id: number, payload: Partial<Dog>): Promise<Dog> {
+    async updateDog(id: string, payload: Partial<Dog>): Promise<Dog> {
         const response = await this.patch(`${this.basePath}/${id}`, payload);
         return this.assertAndParse<Dog>(response, 200);
     }
 
-    async deleteDog(id: number): Promise<void> {
+    async deleteDog(id: string): Promise<void> {
         const response = await this.delete(`${this.basePath}/${id}`);
         expect(response.status()).toBe(200);
     }

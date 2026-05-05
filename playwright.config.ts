@@ -21,7 +21,7 @@ export default defineConfig({
   },
   webServer: {
     command: 'npm run serve',
-    url: 'http://localhost:3001',
+    url: 'http://localhost:3001/dogs',
     reuseExistingServer: !process.env.CI,
     timeout: 10_000,
   },
